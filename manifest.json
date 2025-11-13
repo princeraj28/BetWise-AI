@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Arbitrage Calculator",
+  "version": "1.0",
+  "description": "A floating arbitrage calculator and betting assistant.",
+  "permissions": ["storage"],
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["config.js", "marked.min.js", "content.js"],
+      "css": ["style.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "Arbitrage Calculator"
+  }
+}
